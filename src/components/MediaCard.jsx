@@ -1,6 +1,7 @@
-import { getVote, img_300 } from "../utils";
+import {  img_300 } from "../utils";
+import { Rating } from "./Rating";
 
-export function MediaCard({ media }) {
+export function MediaCard({ media, type }) {
 
     return (
         <div className="card bg-base-100 w-full shadow-sm">
@@ -9,11 +10,10 @@ export function MediaCard({ media }) {
             </figure>
             <div className="card-body">
                 <h2 className="card-title">{media.title || media.name}</h2>
-                <p className="flex justify-between pt-2">
-                    <span>{media.media_type}</span>
+                <div className="flex justify-between pt-2">
+                    <span>{media.media_type || (type != "trending" && <Rating vote={media.vote_average}/>)}</span>
                     <span>{media.release_date || media.first_air_date}</span>
-                </p>
-                {getVote(media.vote_average)}
+                </div>
             </div>
         </div>
     )
