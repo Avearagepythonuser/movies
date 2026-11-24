@@ -63,3 +63,11 @@ export const getTrailer = async (type, id) => {
     );
     return response.data.results;
 };
+
+export const getCredits = async (type, id) => {
+    const response = await api.get(
+        `/${type}/${id}/credits`,
+    );
+    return response.data.cast;
+};
+
