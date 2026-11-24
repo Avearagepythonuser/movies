@@ -1,2 +1,2 @@
 # Publikált oldal:
-[akosmmovies.netlify.app](akosmmovies.netlify.app)
+[akosmmovies.netlify.app](https://akosmmovies.netlify.app/)
