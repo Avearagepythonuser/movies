@@ -35,7 +35,8 @@ const pageTitle = [
     { type: "trending", title: "Népszerű a héten" },
     { type: "movie", title: "Filmek" },
     { type: "tv", title: "Sorozatok" },
-    { type: "search", title: "Keresés" }
+    { type: "search", title: "Keresés" },
+    { type: "actors", title: "Színészek" }
 ]
 
 export const getTitle = (type) => {
@@ -71,3 +72,21 @@ export const getCredits = async (type, id) => {
     return response.data.cast;
 };
 
+export const getPopularPeople = async (page=1) => {
+    return (await api.get("/person/popular", {params: {page}})).data
+}
+
+export const searchPeople = async (query, page) => {
+    return (await api.get("/search/person", {params: {page, query}})).data
+}
+
+export const getPersonDetails = async (id) => {
+    const response = await api.get(`/person/${id}`)
+    return response.data
+}
+
+export const getPersonCredits = async (id) => {
+    const response = (await api.get(`/person/${id}/movie_credits`)).data.cast
+    console.log(response);
+    return response
+}

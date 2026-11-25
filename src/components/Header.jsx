@@ -24,6 +24,7 @@ export function Header() {
                             <NavLink className={navLinkClass} to="/movies">Filmek</NavLink>
                             <NavLink className={navLinkClass} to="/tv">Sorozatok</NavLink>
                             <NavLink className={navLinkClass} to="/search">Keresés</NavLink>
+                            <NavLink className={navLinkClass} to="/actors"> Színészek </NavLink>
                         </div>
 
                         {/* Hamburger */}
@@ -40,6 +41,7 @@ export function Header() {
                             <NavLink className={navLinkClass} to="/movies">Filmek</NavLink>
                             <NavLink className={navLinkClass} to="/tv">Sorozatok</NavLink>
                             <NavLink className={navLinkClass} to="/search">Keresés</NavLink>
+                            <NavLink className={navLinkClass} to="/actors"> Színészek </NavLink>
                         </div>
                     )}
                     
