@@ -19,9 +19,7 @@ export function Movies() {
     useEffect(() => {
         setPage(1)
     }, [selectedCategories])
-    
-
-    
+       
 
     return (
         <div>
