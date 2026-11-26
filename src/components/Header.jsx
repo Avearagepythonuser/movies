@@ -15,7 +15,7 @@ export function Header() {
                 <nav className="px-6 max-w-7xl mx-auto">
                     <div className="flex justify-between items-center text-white p-2">
                         <div className="text-4xl font-bold">
-                            Нет<span className="text-red-500">Flix</span>
+                            Movie<span className="text-red-500">Zone</span>
                         </div>
 
                         {/* asztali menü */}
